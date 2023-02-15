@@ -1,0 +1,45 @@
+#TOP 40 ANALOGOUS WORDS for "CAT SHE LIKE"
+
+
+                                              Word              Distance
+------------------------------------------------------------------------
+                                                he		0.427515
+                                               She		0.418504
+                                           Clinton		0.378783
+                                              bode		0.366652
+                                               Ms.		0.351965
+                                           Hillary		0.343513
+                                              even		0.340386
+                                            happen		0.335891
+                                               But		0.330557
+                                          governor		0.327623
+                                             until		0.325787
+                                            though		0.322994
+                                              Even		0.319467
+                                            really		0.318376
+                                            Though		0.318247
+                                             Palin		0.315333
+                                          probably		0.315280
+                                              Rice		0.314260
+                                            intend		0.313233
+                                                He		0.310821
+                                             again		0.307432
+                                        nomination		0.303675
+                                              Bill		0.302224
+                                          Giuliani		0.301091
+                                                it		0.297712
+                                            noting		0.297077
+                                               Mr.		0.294614
+                                           senator		0.294424
+                                              know		0.290951
+                                               her		0.290458
+                                         Bloomberg		0.289416
+                                         surprised		0.287913
+                                                 I		0.287544
+                                       re-election		0.286424
+                                           specify		0.283208
+                                      disappointed		0.282808
+                                        Schweitzer		0.281113
+                                              lose		0.280893
+                                           Senator		0.280567
+                                             hoped		0.277845

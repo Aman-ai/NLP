@@ -1,0 +1,44 @@
+#TOP 40 ANALOGOUS WORDS FOR "LIKE".
+
+                                              Word              Distance
+------------------------------------------------------------------------
+                                             liked		0.610244
+                                        everywhere		0.576626
+                                             fancy		0.575181
+                                           smarter		0.561748
+                                             enjoy		0.552698
+                                              dont		0.547903
+                                               cry		0.542924
+                                                Or		0.540116
+                                            prefer		0.539496
+                                               etc		0.538135
+                                              wear		0.536342
+                                             smart		0.534443
+                                             guess		0.533677
+                                              Like		0.533098
+                                           anymore		0.530917
+                                         delicious		0.529876
+                                             Maybe		0.528086
+                                            boring		0.526487
+                                            admire		0.525269
+                                           imagine		0.524835
+                                         wonderful		0.522545
+                                          ignorant		0.521056
+                                             tired		0.519452
+                                              cant		0.518126
+                                         Sometimes		0.516604
+                                                Oh		0.516562
+                                              else		0.516113
+                                                OK		0.515503
+                                            pretty		0.514749
+                                               ham		0.513024
+                                           Whether		0.512197
+                                           Because		0.511902
+                                           indulge		0.511214
+                                         listening		0.509116
+                                            afraid		0.508735
+                                       interesting		0.508610
+                                              bear		0.508507
+                                            stupid		0.507608
+                                           reminds		0.505353
+                                              neat		0.503842

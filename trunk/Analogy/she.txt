@@ -1,0 +1,45 @@
+#TOP 40 ANALOGOUS WORDS FOR "SHE".
+
+
+                                              Word              Distance
+------------------------------------------------------------------------
+                                               She		0.795413
+                                               her		0.727541
+                                           herself		0.705049
+                                                he		0.689121
+                                           husband		0.648200
+                                            mother		0.619790
+                                             woman		0.577423
+                                              baby		0.568944
+                                                He		0.559757
+                                              girl		0.554607
+                                               mom		0.554185
+                                           someone		0.551707
+                                            doctor		0.548734
+                                               Ms.		0.543461
+                                          daughter		0.538659
+                                            nobody		0.531188
+                                             smile		0.522523
+                                          everyone		0.519154
+                                             tears		0.518496
+                                           parents		0.515338
+                                            father		0.513474
+                                            family		0.512046
+                                             Palin		0.511819
+                                               dad		0.511614
+                                                me		0.510729
+                                               boy		0.507417
+                                         everybody		0.507184
+                                               Mrs		0.504764
+                                          homework		0.502542
+                                             child		0.501071
+                                               him		0.495173
+                                           anybody		0.493921
+                                          somebody		0.491320
+                                               son		0.488576
+                                     consciousness		0.485927
+                                            myself		0.484998
+                                         afterward		0.484215
+                                                my		0.483913
+                                             alone		0.482290
+                                             alive		0.482190

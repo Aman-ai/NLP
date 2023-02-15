@@ -1,0 +1,45 @@
+#TOP 40 ANALOGOUS WORDS FOR "CAT".
+
+
+                                              Word              Distance
+------------------------------------------------------------------------
+                                               dog		0.832174
+                                            loving		0.828644
+                                             smell		0.825268
+                                           clothes		0.818731
+                                             sweat		0.817675
+                                            lonely		0.816610
+                                             boots		0.816410
+                                             flesh		0.815302
+                                               ear		0.815285
+                                             naked		0.809882
+                                           shallow		0.805647
+                                            tongue		0.805553
+                                              bald		0.805146
+                                            gentle		0.805112
+                                           feeding		0.805099
+                                               pig		0.802146
+                                           breathe		0.801311
+                                              grey		0.801129
+                                            rhythm		0.800773
+                                            lovers		0.799195
+                                             mouse		0.798053
+                                              ears		0.797659
+                                            jacket		0.797238
+                                             dress		0.796171
+                                             cloth		0.796162
+                                     old-fashioned		0.795950
+                                          forehead		0.795672
+                                            colour		0.794846
+                                               mad		0.793736
+                                            lovely		0.792989
+                                         beautiful		0.791945
+                                         nocturnal		0.791005
+                                            blonde		0.788585
+                                             cooks		0.787564
+                                               fur		0.787284
+                                              hats		0.786557
+                                       middle-aged		0.785149
+                                             dirty		0.785136
+                                         invisible		0.785081
+                                           flowers		0.785035
