@@ -359,6 +359,12 @@ void InitNet() {
   CreateBinaryTree();
 }
 
+
+/*
+  The TrainModelThread function reads in a chunk of text from the corpus,
+  processes it into a set of training examples, and updates the neural network
+  weights using the stochastic gradient descent algorithm.
+*/
 void *TrainModelThread(void *id) {
   long long a, b, d, cw, word, last_word, sentence_length = 0, sentence_position = 0;
   long long word_count = 0, last_word_count = 0, sen[MAX_SENTENCE_LENGTH + 1];
@@ -467,6 +473,12 @@ void *TrainModelThread(void *id) {
           // Learn weights hidden -> output
           for (c = 0; c < layer1_size; c++) syn1[c + l2] += g * neu1[c];
         }
+
+        /*
+          If negative sampling is being used, the for loop inside the if statement
+          iterates through the number of negative samples and the
+          positive target word (word) for the current context window.
+        */
         // NEGATIVE SAMPLING
         if (negative > 0) for (d = 0; d < negative + 1; d++) {
           if (d == 0) {
@@ -560,6 +572,14 @@ void *TrainModelThread(void *id) {
   pthread_exit(NULL);
 }
 
+/*
+  TrainModel function that orchestrates the training process,
+  as well as a TrainModelThread function that implements
+  the training loop for a single thread. The TrainModel function
+  initializes various parameters, reads in a corpus of text,
+  creates a vocabulary, initializes the neural network, and
+  launches multiple threads to train the model.
+*/
 void TrainModel() {
   long a, b, c, d;
   FILE *fo;
