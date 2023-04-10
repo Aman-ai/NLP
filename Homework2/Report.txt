@@ -1,0 +1,44 @@
+First, we loaded the JSON data and reformated it to make the JSON file format appropriate to convert it into a data frame.
+
+Then we explore the coolumns of the data frame and check which features coulld help in our sentiment analysis. Sometimes, the features we get would not be the one we need and so we would have to derive appropriate features accrding to or needs. Here, we use the "stars" feature too derive the sentiment. 
+
+We then map the number of stars with the sentiment. Essentially, we are quantifying the number of stars we get:
+
+    if stars_received <= 2:
+            return -1
+        elif stars_received == 3:
+            return 0
+        else:
+            return 1
+            
+After the mapping we study the distribution of the sentiment to better understand the yelp review.
+
+"""
+Number of rows are not equally distributed across these three sentiments. In this post, problem of imbalanced classes won’t be dealt that is why, simple function to retrieve the top few records for each sentiment is written. In this example, top_n is 10000 which means total of 30,000 records will be taken.
+"""
+
+Although removing stop words would be a good start to preprocess the data but in sentiment analysis sometimes stop words are necessary to determone if the ttext review is a positive review or a negative review. For instance:
+        Let the original teext review be --> "I did not like the food!!"
+        On removing stop words we get    --> "I like food!!"
+The 2 above sentences are complete opposite in terms of the sentiment of the sentence. Hence, we can avoid omittting the stop words in this problem.
+The next logical preprocessing of the data would be Tokenization followed by stemming (that is, getting the word to its root form). Tokenization involves dividing a sentence or a piece of text into individual words or tokens, which enables separate transformations to be applied to each word. Additionally, tokenization is necessary to convert words into numerical representations.
+Then the dataset is splitted into 70-30 ratio (70 being the training set and 30 being the valiadtion set). The idea is to maintain an equal distribution of classes in both sets to avoid biased outcomes or inadequate model training. This aspect is vital in machine learning models. In real-world scenarios, imbalanced classes can occur, requiring techniques such as oversampling the minority class or undersampling the majority class.
+
+Now, let us dive in to the CNN. The first is the convolution layer. These layers aim to identify patterns by sliding a small kernel window across the input. Rather than applying filters to tiny sections of images, the window slides through the embedding vectors of a few words, as specified by the window size. To examine sequences of word embeddings, the window must encompass multiple word embeddings in a sequence. Consequently, the window dimensions will be rectangular, with a size of window_size * embedding_size. We will be using 10 filters of dimension 3 X 500. After passing the input through the filters we do maxpooling. After obtaining the feature vector and extracting essential features, it is sufficient to recognize that a specific feature, such as a positive phrase like "great food," exists in the sentence without considering its position. Maxpooling is employed to capture this information and discard the rest. 
+Note: The inputs were padded (window_size-1) to make the height of same size.
+
+Next, we train and see the accuracy of the trained model.
+Model trained for 5, 10, 15 epochs with activation 'tanh' and 'relu'. The results are shown below.
+
+
+
+
+For the LSTM we do a slightly different data preprocessing, we consider two criteria. First, we exclude all reviews with 3 stars, as they are neutral, and our goal is to predict positive or negative sentiment. The second criterion involves maintaining an equal number of positive and negative reviews. We also take care of the imbalanced data and we separate the reviews and stars. We clean the data in a similar way like we did for CNN. For data cleaning, we undertake the following steps:
+
+Eliminate punctuation, remove non-alphanumeric characters, divide each review into an array of words, and convert each word to lowercase.
+Once the reviews are cleaned, we must generate embeddings for each review. Since we cannot directly feed the current text data into the model, we need to encode each word as a unique numerical value. As a result, a review will transform from an array of words to an array of integer values. To accomplish this, we can add an Embedding layer to the network, but we must first create the embedding map.
+
+On further data analysis it seems that the majority of reviews have a length of 20 to 40 words, with fewer reviews having lengths of 60, 80, and 100. Capping the word count at 60 seems to be a reasonable choice. As shown in the code below, we will employ the Keras function pad_sequences, which truncates longer reviews and pads shorter reviews with zeros, up to a maximum limit of 60 words.
+The model features two LSTM layers, each containing 100 neurons, and does not use regularization. It is trained with an Adam optimizer and a batch size of 128.
+The vaidation came out to be around 80% (I had to reduce the number of epochs as there was some wierd error regarding egace adam optimizer and Graph execution). 
+The accuracy is significantly better than the CNN model. The LSTM model I used is pretty basic and it can be improved by using better embeddings (like GloVe)
